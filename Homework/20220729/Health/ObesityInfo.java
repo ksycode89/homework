@@ -38,9 +38,7 @@ public class ObesityInfo extends StandardWeightInfo {
 		return a;
 	}
 	
-	
-	
-	
+
 	
 	
 }

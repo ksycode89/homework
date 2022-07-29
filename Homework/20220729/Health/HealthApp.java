@@ -51,6 +51,7 @@ public class HealthApp {
 				}
 				break;
 			case 3:
+				System.out.println("찾으실 고객의 이름을 입력하세요");
 				String search = scn.nextLine();
 				for (Human a : list) {
 					if (search.equals(a.getName())) {
@@ -63,11 +64,13 @@ public class HealthApp {
 
 				break;
 			case 4:
+				System.out.println("찾으실 고객의 이름을 입력하세요");
 //				System.out.println(oi.getObesity(168,));
 				String search2 = scn.nextLine();
+				
 				for (Human a : list) {
 					if (search2.equals(a.getName())) {
-						System.out.printf("비만도는 %.2f %%  ",oi.getObesity(a.getWeight(), oi.getStandardWeight(a.getHeight())));
+						System.out.printf("%s의 비만도는 %.2f %%  ",a.getName(),oi.getObesity(a.getWeight(), oi.getStandardWeight(a.getHeight())));
 						if(oi.getObesity(a.getWeight(), oi.getStandardWeight(a.getHeight()))<-10){
 							System.out.println("[체중미달]");
 						}else if (oi.getObesity(a.getWeight(), oi.getStandardWeight(a.getHeight()))>=-10

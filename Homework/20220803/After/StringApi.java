@@ -20,10 +20,11 @@ public class StringApi {
 
 //	  LocalDate now = LocalDate.now();
 		int age = (Integer.parseInt(num.substring(0, 2)));
-		if (age == 00) {
+		if (age >=00 && age <=22 ) {
+		
 			int result2 = 122 - (age + 100);
 			System.out.println(result2);
-		} else {
+		} else if(age>22 && age<99){
 			int result = 122 - age;
 			System.out.println(result + "살");
 

@@ -9,20 +9,20 @@ public class Lott {
 
 		Scanner scn = new Scanner(System.in);
 		List<int[]> lotto = new ArrayList<>();
-		int[] lotto2 = new int[6];
+		int [] lotto2 = new int[6];
 
 		for (int i = 0; i < 6; i++) {
-			int a = (int) ((Math.random() * 45) + 1);
+			lotto2[i] = (int)((Math.random()*45)+1);
 
 			if (i > 0) {
 				for (int j = 0; j < 6; j++) {
-					if (lotto2[i] == a) {
-						i += -1;
+					if (lotto2[i] == lotto2[j]) {
+						i--;
 						break;
 					}
 
 				} // 중복확인 구문
-				lotto2[i] = a;
+				
 			}
 			lotto.add(lotto2);
 		}

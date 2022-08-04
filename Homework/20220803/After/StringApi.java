@@ -1,4 +1,4 @@
-package After;
+ package After;
 
 //123456-1234567
 import java.util.Scanner;

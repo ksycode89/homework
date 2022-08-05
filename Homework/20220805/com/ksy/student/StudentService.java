@@ -69,8 +69,8 @@ public class StudentService {
 	public void check(int v) {
 		if (v == 1) {
 			System.out.println("입력 완료");
-		}
-		{
+		}else{
+		
 			System.out.println("입력 실패");
 		}
 	}

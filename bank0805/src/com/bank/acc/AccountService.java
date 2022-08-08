@@ -1,6 +1,11 @@
 package com.bank.acc;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
+import com.bank.loan.LoanDTO;
+import com.bank.member.BankMemberService;
 
 public class AccountService {
 	Scanner scn = new Scanner(System.in);
@@ -99,12 +104,20 @@ public class AccountService {
 		
 		
 	}
+	//계좌 조회 (new)==
+	public void getAcc() {
+		List<AccDTO> list = 
+				AccManage.getInstance().getAcc(BankMemberService.memberInfo.getMemberId());
+		System.out.println(BankMemberService.memberInfo.getMemberName());
+		for(AccDTO acc : list) {
+			System.out.println("계좌 Id"+acc.getAccId());
+			System.out.println("잔고"+acc.getBalance());
+			System.out.println("생성일"+acc.getChreate_hire());
+		}
+	}
 	
+//===계좌 등록 ====
 	
-	
-	
-	
-	
-	
+
 	
 }

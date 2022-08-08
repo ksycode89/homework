@@ -30,7 +30,7 @@ public class BankMemberManage extends DAO {
 				member.setMemberPw(rs.getString("member_pw"));
 				member.setMemberName(rs.getString("member_name"));
 //				member.setMemberId(rs.getString("member_id"));
-				member.setRole(rs.getString("roles"));
+				member.setRoles(rs.getString("roles"));
 				
 			}
 		} catch (Exception e) {

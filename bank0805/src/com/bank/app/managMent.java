@@ -35,7 +35,21 @@ public class managMent {
 				}
 				
 			} else if (BankMemberService.memberInfo.getRoles().equals("0")) {
+				switch(menu) {
+				case 1: 
+					//계좌 조
+					as.check();
+				case 2:
+					as.money();
+				case 3:
+					
+				case 4:
+					
 				
+				
+				
+				
+				}
 				
 			}
 			
@@ -46,7 +60,7 @@ public class managMent {
 		if (BankMemberService.memberInfo.getRoles().equals("1")) {
 			System.out.println("1.고객등록 2.계좌 개설 3.입출금 4.계좌 이체 " + "5. 계좌 해지 6.대출");
 		} else if (BankMemberService.memberInfo.getRoles().equals("0")) {
-			System.out.println("1.계좌 조회 2.입출금 3.이체 4.대출");
+			System.out.println("1.계좌 조회 2.입출금 3.대출");
 
 		}
 		System.out.println("입력");

@@ -8,7 +8,7 @@ public class AccDTO {
 	private	int    balance;
 	private	Date chreate_hire;
 
-	AccDTO(){super();}
+	public AccDTO(){super();}
 
 	public String getAccId() {
 		return accId;

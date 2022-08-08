@@ -16,6 +16,8 @@ public class AccountService {
 
 		ac.setAccId(accid);
 		ac.setMemberId(memid);
+		
+	AccManage.getInstance().insertAcc(ac);
 
 	}
 	//입출금 계좌 해지 계좌 이체================================
@@ -56,7 +58,7 @@ public class AccountService {
 		
 		int result = AccManage.getInstance().delAcc(accid);
 		
-		if(result==1) {
+		if(result==0) {
 			System.out.println("삭제 성공.");
 			
 		}else {System.out.println("삭제 실패");}
@@ -82,5 +84,27 @@ public class AccountService {
 		
 		
 	}
-
+//=====계좌 조회========
+	
+	public void check() {
+		System.out.println("계좌 조회를 시작합니다.");
+		
+		System.out.println("계좌를 입력해주세");
+		String accid = scn.nextLine();
+		
+		System.out.println(AccManage.getInstance().checkAcc(accid).toString());
+		AccManage.getInstance().checkAcc(accid);
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }

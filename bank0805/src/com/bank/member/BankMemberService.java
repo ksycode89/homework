@@ -2,6 +2,8 @@ package com.bank.member;
 
 import java.util.Scanner;
 
+import com.bank.acc.AccDTO;
+
 public class BankMemberService {
 	Scanner scn = new Scanner(System.in);
 	//비밀번호 저장공간 stac에 올라감
@@ -47,7 +49,7 @@ public class BankMemberService {
 		member.setMemberId(id);
 		member.setMemberPw(pw);
 		member.setMemberName(name);
-		member.setRole("0");
+		member.setRoles("0");
 		
 		int result = BankMemberManage.getInstance().registCustomer(member);
 		
